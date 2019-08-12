@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <p>Table</p>
+    <table class="table">
+        {% for i in content %}
+            <tr>
+                <td> <a class="a__table" href="/done/{{ i }}" onclick="return confirm('Завершено?')">{{ i }} </a> </td>
+                <td> <a class="a__table" target="_blank" href="https://ege.sdamgia.ru/problem?id={{ i }}">Задача</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <input class="form-control" id="textbox_id" type="text" placeholder="Номер">
+    <a href='javascript: goToPage()'>add</a>
+    <script>
+        function goToPage() {
+            var url = document.getElementById('textbox_id').value;
+            console.log(typeof url);
+            document.location.href = "/add/" + url;
+        }
+    </script>
+{% endblock %}
+{#/add/javascript:document.getElementById('textbox_id').value#}
