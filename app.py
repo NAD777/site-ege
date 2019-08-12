@@ -28,6 +28,11 @@ def add_task(name_task):
     else:
         return render_template('was.html', num=name_task)
 
+@app.route('/del/<name_task>')
+def del_task(name_task):
+    delete('data', name_task)
+    return redirect('/table')
+
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=27018)
