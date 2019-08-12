@@ -1,7 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
     background-color: #CCCCCC;
@@ -17,13 +14,20 @@ body {
     padding-top: 2%
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+}
+
+.table {
+    margin: 0 auto;
+    height: auto;
+    width: auto;
+    text-align: center;
 }
 
 .a__table {
@@ -33,12 +37,12 @@ p {
     height: 5%;
 }
 
-a:hover {
+.a__table:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-a:visited {
+.a__table:visited {
     text-decoration: none;
 }
 
@@ -52,4 +56,20 @@ th, td, tr {
 
 td {
     background: #D8E6F3;
+    width: 20vw;
+}
+
+tr {
+    line-height: 7vh;
+}
+
+.input {
+    margin: 0 auto;
+    height: auto;
+    width: 20vh;
+    border: 10px #D8E6F3;
+}
+
+.a__search {
+
 }

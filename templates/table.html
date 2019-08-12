@@ -2,6 +2,8 @@
 
 {% block content %}
     <p>Table</p>
+    <input class="input" id="textbox_id" type="text" placeholder="Номер">
+    <a class="btn btn-primary a__search" href='javascript: goToPage()'>add</a>
     <table class="table">
         {% for i in content %}
             <tr>
@@ -11,4 +13,13 @@
             </tr>
         {% endfor %}
     </table>
+    <script>
+        function goToPage() {
+            var url = document.getElementById('textbox_id').value;
+            console.log(typeof url);
+            if (url !== "") {
+                document.location.href = "/add/" + url;
+            }
+        }
+    </script>
 {% endblock %}

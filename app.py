@@ -24,7 +24,7 @@ def done_task(name_task):
 @app.route('/add/<name_task>')
 def add_task(name_task):
     if add('data', name_task, 'data', 'done'):
-        return redirect('/')
+        return redirect('/table')
     else:
         return render_template('was.html', num=name_task)
 
