@@ -5,8 +5,8 @@
     <table class="table">
         {% for i in content %}
             <tr>
-                <td> <a class="a__table" href="/done/{{ i }}" onclick="return confirm('Завершено?')">{{ i }} </a> </td>
-                <td> <a class="a__table" target="_blank" href="https://ege.sdamgia.ru/problem?id={{ i }}">Задача</a></td>
+                <td> <a class="a__table" target="_blank" href="https://ege.sdamgia.ru/problem?id={{ i }}"> {{ i }} </a> </td>
+                <td> <a class="a__table" href="/done/{{ i }}" onclick="return confirm('Завершено?')">Готово</a></td>
 				<td> <a class="a__table a_del__table" href="/del/{{ i }}" onclick="return confirm('Удалить?')">Удалить</a></td>
             </tr>
         {% endfor %}
