@@ -46,6 +46,10 @@ p {
     text-decoration: none;
 }
 
+.a_del__table:hover{
+    color: red;
+}
+
 th, td, tr {
     background: #AFCDE7;
     border-style: solid;
