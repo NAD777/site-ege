@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <table class="table">
+        <p>Кол-во сделаных заданий: {{ col }}</p>
+        {% for i in content %}
+            <tr>
+                <td><a class="a__table" target="_blank" href="https://ege.sdamgia.ru/problem?id={{ i }}"> {{ i }} </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+

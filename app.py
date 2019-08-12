@@ -28,10 +28,17 @@ def add_task(name_task):
     else:
         return render_template('was.html', num=name_task)
 
+
 @app.route('/del/<name_task>')
 def del_task(name_task):
     delete('data', name_task)
     return redirect('/table')
+
+
+@app.route('/done')
+def done():
+    content = read('done')
+    return render_template('done.html', content=content, col=len(content))
 
 
 if __name__ == '__main__':
