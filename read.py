@@ -29,7 +29,7 @@ def done(name_file_from, line_done, name_file_to):
 
 if __name__ == '__main__':
     # print(read('data'))
-    done('data', 'fgs', 'done')
+    done('done', '323969', 'done')
 
 """
 asd

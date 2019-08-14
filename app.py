@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect
-from read import read, delete, add, done
+import read
 
 app = Flask(__name__)
 
@@ -11,19 +11,19 @@ def index():
 
 @app.route('/table')
 def table():
-    a = read('data')
+    a = read.read('data')
     return render_template('table.html', content=a)
 
 
 @app.route('/done/<name_task>')
 def done_task(name_task):
-    done('data', name_task, 'done')
+    read.done('data', name_task, 'done')
     return redirect('/table')
 
 
 @app.route('/add/<name_task>')
 def add_task(name_task):
-    if add('data', name_task, 'data', 'done'):
+    if read.add('data', name_task, 'data', 'done'):
         return redirect('/table')
     else:
         return render_template('was.html', num=name_task)
@@ -31,13 +31,13 @@ def add_task(name_task):
 
 @app.route('/del/<name_task>')
 def del_task(name_task):
-    delete('data', name_task)
+    read.delete('data', name_task)
     return redirect('/table')
 
 
 @app.route('/done')
 def done():
-    content = read('done')
+    content = read.read('done')
     return render_template('done.html', content=content, col=len(content))
 
 
